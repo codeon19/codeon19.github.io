@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title></title>
+
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/agency.css" rel="stylesheet">
+  <link rel="icon" href="http://www.cubed.work/favicon/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="http://www.cubed.work/favicon/favicon.ico" type="image/x-icon"/>
+
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Bitter:400,700,400italic|Raleway:400,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+  <script src="buildTemplate.js"></script>
+
+
+
+<!--This is our template. -->
+<!--Data will be inserted in its according place, replacing the brackets.-->
+<script id="address-template" type="text/x-handlebars-template">
+<body>
+<nav id="nav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">{{name}}</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    {{#each navItems}} 
+                      <li>
+                        <a class="page-scroll" href="#{{name}}">{{name}}</a>
+                      </li>
+                    {{/each}}
+                      
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="row">
+                  {{#if headingLeft}}
+                    <div class="col-md-4 col-sm-4 text-left">
+                  {{else}}
+                    <div class="col-md-12 col-sm-12 text-center">
+                  {{/if}}
+                      {{#if leadIn}}
+                        <div class="intro-lead-in">
+                            {{leadIn}}
+                        </div>
+                      {{/if}}
+                        <div class="intro-heading">
+                          {{#if heading}}
+                            {{heading}}
+                          {{else}}
+                            {{name}}
+                          {{/if}}
+
+
+                        </div>
+                        {{#if briefDescription}}
+                          <p class="large">{{briefDescription}}</p>
+                        {{/if}}
+                        </div>
+                    </div>
+                {{#if showHeaderButton}}
+                <a href="#portfolio" class="page-scroll btn btn-xl">{{headerButtonText}}</a>
+                {{/if}}
+        </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    {{#if portfolioItems}}
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Portfolio</h2>
+                    <h3 class="section-subheading text-muted">Here are some projects I&#39;ve worked on.</h3>
+                </div>
+            </div>
+            <div class="row">
+              {{#each portfolioItems}}
+                  <div class="col-md-4 col-sm-6 portfolio-item">
+                    {{#if link}}
+                      <a href="http://landonbrand.github.io/Bit-Vision/" class="portfolio-link" target="_blank">
+                    {{else}}
+                      <a href="#portfolioModal{{inc @index}}" class="portfolio-link" data-toggle="modal">
+                    {{/if}}
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                  <i class="fa fa-plus fa-3x"></i>
+                              </div>
+                          </div>
+                          <img src="img/portfolio/{{inc @index}}/preview.jpg" class="img-responsive" alt="">
+                      </a>
+                      <div class="portfolio-caption">
+                          <h4>{{name}}</h4>
+                          <p class="text-muted">{{subtext}}</p>
+                      </div>
+                  </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+    {{/if}}
+
+     <!-- Experience Section -->
+     {{#if showExperienceSection}}
+    <section id="Experience">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{experienceHeading}}</h2>
+                    <h3 class="section-subheading text-muted">{{experienceSubHeading}}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <br/>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-10">
+                {{#each experienceItems}}
+                    <div class="experience-panel">
+                        <div class="experience-heading">
+                            <h5 class="subheading">{{company}}</h5>
+                            <h4>{{time}}</h4>
+                            <br/>
+                            <h6>{{position}}</h6>
+                            <br/>
+                            {{#if place}}
+                               <h6>{{place}}</h6>
+                                <br/>
+                            {{/if}}
+
+                        </div>
+                        <div class="timeline-body">
+                            {{#each bullets}}
+                              <p>{{bullet}}</p>
+                            {{/each}}
+                        </div>
+                    </div>
+                  {{/each}}
+                </div>
+            </div>
+        </div>
+    </section>
+    {{/if}}
+
+    <section class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                    {{#if awardItems}}
+                      <div class="col-md-5">
+                        <section id="education" class="text-left">
+                    {{else}}
+                     <div class="col-md-12">
+                        <section id="Education" class="text-center">
+                    {{/if}}
+                            <h2 class="section-heading ">Education</h2>
+                            <br/>
+                            {{#each educationItems}}
+                            <div class="education-panel">
+                                <div class="education-heading">
+                                    {{#if ../awardItems}}
+                                        <h4>{{school}}</h4>
+                                        {{#if degree}}
+                                          <br/>
+                                          <h5>{{degree}}</h5>
+                                        {{/if}}
+                                        {{#if minor}}
+                                          <br/>
+                                          <h5>{{minor}}</h5>
+                                        {{/if}}
+                                        <br/>
+                                        <h6>{{time}}</h6>
+                                        {{#if place}}
+                                          <br/>
+                                          <h6>{{place}}</h6>
+                                        {{/if}}
+                                        <br/>
+                                    {{else}}
+                                      <div class="col-md-12">
+                                          <div class="col-md-10 text-left">
+                                              <h4>{{school}}</h4>
+                                              {{#if degree}}
+                                                <br/>
+                                                <h5 class="text-muted">{{degree}}</h5>
+                                              {{/if}}
+                                              {{#if minor}}
+                                                <br/>
+                                                <h5 class="text-muted">{{minor}}</h5>
+                                              {{/if}}
+                                          </div>
+                                          <div class="col-md-2 text-right">
+                                              <h6>{{time}}</h6>
+                                              {{#if place}}
+                                                <br/>
+                                                <h6>{{place}}</h6>
+                                              {{/if}}
+                                               {{#if gpa}}
+                                                <br/>
+                                                <h6>{{gpa}}</h6>
+                                              {{/if}}
+                                          </div>
+                                      </div>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            {{/each}}
+                        </section>
+                    </div>  
+                {{#if awardItems}}
+                    <div class="col-md-6">
+                        <section class="text-left">
+                            <h2 class="section-heading ">Awards</h2>
+                            <br/>
+                            <div class="awards-panel ">
+                              {{#each awardItems}}
+                                <h4><strong>{{award}}</strong> </h4>
+                                <h6>{{time}}</h6>
+                                <br/><br/><br/>
+                              {{/each}}
+                            </section>
+                    </div>  
+                {{/if}}
+                
+             </div>
+        </div>
+    </section>
+
+    <section id="Skills">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{skillsHeading}}</h2>
+                    <br/>
+                </div>
+            </div>
+            <div class="row text-center">
+              {{#each skillItems}}
+                <div class={{../skillColumnType}}>
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa {{icon}} fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <br/>
+                    <br/>
+                    {{#each skills}}
+                      <p class="text-muted">{{skill}}</p>
+                    {{/each}}
+                </div>
+              {{/each}}
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="Projects">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Projects</h2>
+                </div>
+            </div>
+            <div class="row">
+                <br/>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-10">
+                    <div class="experience-panel">
+                        <div class="experience-heading">
+                            <h5 class="subheading"><a href="http://www.monkeybusinesscafe.org/" target="_blank">Monkey Business Cafe</a></h5>
+                            <h4>September 2015 - December 2015</h4>
+                            <br/>
+                        </div>
+                        <div class="timeline-body">
+                              <p>In order to help Monkey Business Cafe to achieve its goal as a social enterprise serving at-risk youth through its workforce development program, we sought to increase revenue by addressing a couple of key needs. Monkey Business Cafe came to LACI hoping to market for recently opened evening hours and strengthen the newly streamlined catering business. Our project tackles these needs through intensive market research and strategic planning to address Monkey Business Cafe's most important needs.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="Contact" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contact</h2>
+                    <br/>
+                </div>
+            </div>
+            <div class="row text-center">
+                <h4>Email: <a href="mailto:{{email}}" target="_blank">{{email}}</a></h4>
+                {{#if phone}}
+                  <h4>Phone: {{phone}}</h4>
+                {{/if}}
+                {{#if address}}
+                  <h4>{{address}}</h4>
+                {{/if}}
+                  <br/>
+                {{#each socialItems}}
+                  <a href="{{link}}" target="_blank">
+                    <span class="fa-stack fa-2x">
+                        <i class="fa fa-square fa-stack-2x text-primary"></i>
+                        <i class="fa {{icon}} fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="copyright">Website designed by <a href="http://Cubed.Work">Cubed.Work</a></p>
+                    <p class="copyright">Copyright &copy; <a href="http://Cubed.Work">Cubed.Work</a> 2016</p>
+                     <p class="copyright">Made using <a href="http://startbootstrap.com/">start bootstrap</a></p>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modal -->
+    {{#each portfolioItems}}
+    <div class="portfolio-modal modal fade" id="portfolioModal{{inc @index}}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>{{name}}</h2>
+                            <p class="item-intro text-muted">{{subtext}}</p>
+
+                            {{buildImgs @index}}
+
+                            <p>{{description}}</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+
+
+</script>
+
+
+
+<script src="js/bootstrap.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="js/classie.js"></script>
+
+<script src="js/jqBootstrapValidation.js"></script>
+<script src="js/contact_me.js"></script>
+
+<script src="js/agency.js"></script>
+<script src="js/cbpAnimatedHeader.js"></script>
+
+</body>
+
+
+<!--Your new content will be displayed in here-->
+<body id="page-top" class="index" data-spy="scroll" data-target="nav">
+  <div class="content-placeholder"></div>
+</body>
+
+
+</html>
+
+
+
