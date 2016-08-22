@@ -33,52 +33,52 @@ $(function () {
 
         experienceItems: [
           { 
+            company:    "Prospect Silicon Valley",
+            position:   "Software Engineer/Project Coordinator",
+            time:       "Summer 2016",
+            place:      "San Jose, CA",
+            bullets: [
+                { bullet: "Worked on developing applications that combined Prospect Silicon Valley’s Intelligent Transportation Lab and fka Silicon Valley’s Simulation Lab (fka SV is an associated research group with Aachen University)"        },
+                { bullet: "Streamlined the client onboarding system and integrated various lead pipelines"        },
+                { bullet: "Conducted aggregate purchase surveys for prospective cities leasing EV Fleets"        }
+            ]
+          },
+            
+          { 
             company:    "CSchedule",
-            position:   "Web Developer",
-            time:       "Summer 2015",
+            position:   "Front-End Web Intern",
+            time:       "Summer 2015, 2016",
             place:      "Santa Clara, CA",
             bullets: [
-              { bullet: "Acquired basics of JavaScript and its applications"        },
-              { bullet: "Experienced firsthand Silicon Valley startup operations"        }
+              { bullet: "Learned HTML, CSS, and JavaScript with JQuery and Backbone framework"        },
+              { bullet: "Explored various API’s include Drop.js and Facebook login"        },
+              { bullet: "Designed logic of architecture involving asynchronous calls"        },
+              { bullet: "Utilized advanced Agile principles"        } 
             ]
           },
 
           { 
             company:    "TPK Touch Solutions, Inc.",
-            position:   "Sales and Marketing Intern",
+            position:   "Project Management Intern",
             time:       "Summer 2014",
             place:      "Xiamen, China",
             bullets: [
               { bullet: "Developed Project Management skills involving production of touchscreens"        },
-              { bullet: "Analyzed case studies concerning lifecycle of a product from DVT to fulfillment"        },
-              { bullet: "Employed Excel to track sales"        }
+              { bullet: "Analyzed case studies concerning lifecycle of a product from DVT to fulfillment"        }
             ]
           },
 
           { 
             company:    "Los Angeles Community Impact",
-            position:   "Consultant",
+            position:   "Director of Internal Resources/Consultant",
             time:       "Fall 2015 – Present",
-            place:      false,
+            place:      "Los Angeles, CA",
             bullets: [
-              { bullet: "Pro-bono consulting club at USC that targets NGOs, social impact businesses, and small businesses in teams of 3 – 5"        },
-              { bullet: "Consulted an extant non-profit organization in Fall 2015 with a multimillion-dollar operating budget"        }
-            ]
-          },
-
-          { 
-            company:    "Impact Christian Club",
-            position:   "President",
-            time:       "Fall 2014 – Spring 2015",
-            place:      false,
-            bullets: [
-              { bullet: "Appointed President senior year after being an active member for 4 years"        },
-              { bullet: "Organized inter-district concerts and fundraisers"        },
-              { bullet: "Hosted Youth Groups at house during senior year of high school, developing a special community for Christian and non-Christians to discuss religion"        }
+              { bullet: "Pro-bono consulting club at USC that consults NGOs/small businesses with multimillion dollar budgets" },
+              { bullet: "As Director of IR, designed databases that aggregated past clients, project deliverables, and school resources to facilitate client acquisition and project operations"        },
+              { bullet: "As Strategic Consultant, learned effective market research strategies/scaling growing businesses"        } 
             ]
           }
-
-          
         ],
 
         educationItems: [
@@ -87,13 +87,13 @@ $(function () {
             degree:    "Bachelor of Science in Computer Science and Business Administration",
             time:      "Fall 2015 – Present",
             place:     "Los Angeles, CA",
-            gpa:       "GPA: 3.93"
+            gpa:       "GPA: 3.71"
           },
           { 
             school:    "Saratoga High School",
             time:      "June 2015",
-            place:     "Saratoga, California",
-            gpa:       false
+            place:     "Saratoga, CA",
+            gpa:       "Graduated with Honors"
           }
         ],
 
@@ -124,14 +124,17 @@ $(function () {
               icon: "fa-laptop",
               skills: [
                 { skill: "Java and C++" },
-                { skill: "Microsoft Office" }
+                { skill: "Android Development" },
+                { skill: "HTML, CSS, JavaScript" },
+                { skill: "Backbone" },  
+                { skill: "Microsoft Excel" }
               ],
           },
           {
               icon: "fa-language",
               skills: [
-                { skill: "Fluent in English and understands Chinese" },
-                { skill: "Cantonese Chinese" }
+                { skill: "English" },
+                { skill: "Chinese" }
               ],
           },
           {
@@ -147,7 +150,7 @@ $(function () {
 
         "email":                "breck@usc.edu",
         "phone":                "(408)-858-3628",
-        "address":              "3305 C1, 902 W. 37th Place, Los Angeles, CA 90007",
+        "address":              "D534, 3131 S. McClintock Avenue , Los Angeles, CA 90007",
 
         socialItems: [
           {
