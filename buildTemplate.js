@@ -70,13 +70,13 @@ $(function () {
 
           { 
             company:    "Los Angeles Community Impact",
-            position:   "Director of Internal Resources/Consultant",
+            position:   "Director of Internal Resources/Team Leader",
             time:       "Fall 2015 – Present",
             place:      "Los Angeles, CA",
             bullets: [
               { bullet: "Pro-bono consulting club at USC that consults NGOs/small businesses with multimillion dollar budgets" },
               { bullet: "As Director of IR, designed databases that aggregated past clients, project deliverables, and school resources to facilitate client acquisition and project operations"        },
-              { bullet: "As Strategic Consultant, learned effective market research strategies/scaling growing businesses"        } 
+              { bullet: "As Team Leader, currently managing a team for the Harold Robinson Foundation"        } 
             ]
           }
         ],
@@ -87,7 +87,7 @@ $(function () {
             degree:    "Bachelor of Science in Computer Science and Business Administration",
             time:      "Fall 2015 – Present",
             place:     "Los Angeles, CA",
-            gpa:       "GPA: 3.71"
+            gpa:       "GPA: 3.58"
           },
           { 
             school:    "Saratoga High School",
