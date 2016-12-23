@@ -11,8 +11,7 @@ $(function () {
         "name":                 "Samuel Breck",
         "leadIn":                false,
         "headingLeft":           false, //true means heading is left aligned with a small column
-        "heading":               "Samuel Breck",
-        "briefDescription":      "I am currently a student at the University of Southern California studying Computer Science and Business Administration. It is here that I am currently developing my passion for programming and natural affinity for business. Born and raised in the heart of the Silicon Valley, I will pursue a future in innovation wherever I end up.",
+        "heading":               "Hi! I'm Samuel.",
         "showHeaderButton":     false,
         "headerButtonText":     "Show More",
         
@@ -21,7 +20,7 @@ $(function () {
           { name: "Experience"   },
           { name: "Education"    },
           { name: "Skills"       },
-          { name: "Projects"       },
+          { name: "Projects"     },
           { name: "Contact"      }
         ],
 
