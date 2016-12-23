@@ -149,7 +149,7 @@ $(function () {
 
         "email":                "breck@usc.edu",
         "phone":                "(408)-858-3628",
-        "address":              "D534, 3131 S. McClintock Avenue , Los Angeles, CA 90007",
+        "address":              "D534, 3131 S. McClintock Avenue, Los Angeles, CA 90007",
 
         socialItems: [
           {
