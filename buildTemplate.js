@@ -14,7 +14,7 @@ $(function () {
         "heading":               "Hi! I'm Samuel.",
         "showHeaderButton":     false,
         "headerButtonText":     "Show More",
-        
+
 
         navItems: [
           { name: "Experience"   },
@@ -26,12 +26,12 @@ $(function () {
 
         portfolioItems: false,
 
-        "showExperienceSection":  true, 
+        "showExperienceSection":  true,
         "experienceHeading":      "Experience",
-        "experienceSubHeading":   "", 
+        "experienceSubHeading":   "",
 
         experienceItems: [
-          { 
+          {
             company:    "Prospect Silicon Valley",
             position:   "Software Engineer/Project Coordinator",
             time:       "Summer 2016",
@@ -42,8 +42,8 @@ $(function () {
                 { bullet: "Conducted aggregate purchase surveys for prospective cities leasing EV Fleets"        }
             ]
           },
-            
-          { 
+
+          {
             company:    "CSchedule",
             position:   "Front-End Web Intern",
             time:       "Summer 2015, 2016",
@@ -52,11 +52,11 @@ $(function () {
               { bullet: "Learned HTML, CSS, and JavaScript with JQuery and Backbone framework"        },
               { bullet: "Explored various API’s include Drop.js and Facebook login"        },
               { bullet: "Designed logic of architecture involving asynchronous calls"        },
-              { bullet: "Utilized advanced Agile principles"        } 
+              { bullet: "Utilized advanced Agile principles"        }
             ]
           },
 
-          { 
+          {
             company:    "TPK Touch Solutions, Inc.",
             position:   "Project Management Intern",
             time:       "Summer 2014",
@@ -67,7 +67,7 @@ $(function () {
             ]
           },
 
-          { 
+          {
             company:    "Los Angeles Community Impact",
             position:   "Director of Internal Resources/Team Leader",
             time:       "Fall 2015 – Present",
@@ -75,20 +75,19 @@ $(function () {
             bullets: [
               { bullet: "Pro-bono consulting club at USC that consults NGOs/small businesses with multimillion dollar budgets" },
               { bullet: "As Director of IR, designed databases that aggregated past clients, project deliverables, and school resources to facilitate client acquisition and project operations"        },
-              { bullet: "As Team Leader, currently managing a team for the Harold Robinson Foundation"        } 
+              { bullet: "As Team Leader, currently managing a team for the Harold Robinson Foundation"        }
             ]
           }
         ],
 
         educationItems: [
-          { 
+          {
             school:    "University of Southern California, Viterbi School of Engineering",
             degree:    "Bachelor of Science in Computer Science and Business Administration",
             time:      "Fall 2015 – Present",
             place:     "Los Angeles, CA",
-            gpa:       "GPA: 3.58"
           },
-          { 
+          {
             school:    "Saratoga High School",
             time:      "June 2015",
             place:     "Saratoga, CA",
@@ -98,19 +97,19 @@ $(function () {
 
         "showAwardSection": false,
         awardItems: false, /*[
-          { 
+          {
             award:    "NATIONAL HONORS SOCIETY",
             time:      "AUGUST 2011 - JUNE 2015"
           },
-          { 
+          {
             award:    "CALIFORNIA SCHOLARSHIP FOUNDATION",
             time:      "AUGUST 2011 - JUNE 2015"
           },
-          { 
+          {
             award:    "NATIONAL HONORS ART SOCIETY",
             time:      "AUGUST 2011 - JUNE 2015"
           },
-          { 
+          {
             award:    "FOUR AWARDS AT 2015 SAN MATEO MAKER FAIRE FOR SENIOR CAPSTONE PROJECT",
             time:      "MAY 2015"
           }
@@ -125,7 +124,7 @@ $(function () {
                 { skill: "Java and C++" },
                 { skill: "Android Development" },
                 { skill: "HTML, CSS, JavaScript" },
-                { skill: "Backbone" },  
+                { skill: "Backbone" },
                 { skill: "Microsoft Excel" }
               ],
           },
@@ -172,7 +171,7 @@ $(function () {
           while(s.charAt(0) === ' ')
             s = s.slice(1);
 
-          out = out + '<li><a class="page-scroll" href="#' + s + '"">'  
+          out = out + '<li><a class="page-scroll" href="#' + s + '"">'
               + s +  '</a></li>';
         }
 
@@ -223,7 +222,7 @@ $(function () {
 
           return ret;
 
-          
+
       });
 
       Handlebars.registerHelper("buildImgs", function(directory, options)
@@ -255,7 +254,7 @@ $(function () {
 
           return new Handlebars.SafeString(ret);
 
-          
+
       });
 
       $('title').html(context.name);
