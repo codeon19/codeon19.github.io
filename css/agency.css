@@ -280,12 +280,10 @@ section h2.section-heading {
   margin-bottom: 15px;
 }
 section h3.section-subheading {
-  font-size: 16px;
-  font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: none;
-  font-style: italic;
+  font-size: 25px;
   font-weight: 400;
-  margin-bottom: 75px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 @media (min-width: 768px) {
   section {
