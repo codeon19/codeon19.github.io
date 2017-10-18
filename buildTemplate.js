@@ -32,8 +32,25 @@ $(function () {
 
         experienceItems: [
           {
+            company:    "USC Institute for Creative Technologies",
+            position:   "Student Researcher",
+            time:       "Fall 2017 - Present",
+            place:      "Playa Vista, CA"
+          },
+          {
+            company:    "PlayStation",
+            position:   "Software Engineering Intern",
+            time:       "Summer 2017",
+            place:      "San Jose, CA",
+            bullets: [
+                { bullet: "Planned, developed, tested, and launched minor/major features for the PlayStation Store team on the PS4 console" },
+                { bullet: "Worked as a front-end developer with XML/CSS, Web GL, and custom JavaScript frameworks"        },
+                { bullet: "Eliminated various defects associated with the PlayStation Store"        }
+            ]
+          },
+          {
             company:    "Prospect Silicon Valley",
-            position:   "Software Engineer/Project Coordinator",
+            position:   "Software Engineering Project Coordinator Intern",
             time:       "Summer 2016",
             place:      "San Jose, CA",
             bullets: [
@@ -42,20 +59,17 @@ $(function () {
                 { bullet: "Conducted aggregate purchase surveys for prospective cities leasing EV Fleets"        }
             ]
           },
-
           {
             company:    "CSchedule",
-            position:   "Front-End Web Intern",
+            position:   "Software Engineering Intern",
             time:       "Summer 2015, 2016",
             place:      "Santa Clara, CA",
             bullets: [
               { bullet: "Learned HTML, CSS, and JavaScript with JQuery and Backbone framework"        },
               { bullet: "Explored various API’s include Drop.js and Facebook login"        },
-              { bullet: "Designed logic of architecture involving asynchronous calls"        },
-              { bullet: "Utilized advanced Agile principles"        }
+              { bullet: "Designed logic of architecture involving asynchronous calls"        }
             ]
           },
-
           {
             company:    "TPK Touch Solutions, Inc.",
             position:   "Project Management Intern",
@@ -65,27 +79,16 @@ $(function () {
               { bullet: "Developed Project Management skills involving production of touchscreens"        },
               { bullet: "Analyzed case studies concerning lifecycle of a product from DVT to fulfillment"        }
             ]
-          },
-
-          {
-            company:    "Los Angeles Community Impact",
-            position:   "Director of Internal Resources/Team Leader",
-            time:       "Fall 2015 – Present",
-            place:      "Los Angeles, CA",
-            bullets: [
-              { bullet: "Pro-bono consulting club at USC that consults NGOs/small businesses with multimillion dollar budgets" },
-              { bullet: "As Director of IR, designed databases that aggregated past clients, project deliverables, and school resources to facilitate client acquisition and project operations"        },
-              { bullet: "As Team Leader, currently managing a team for the Harold Robinson Foundation"        }
-            ]
           }
         ],
 
         educationItems: [
           {
             school:    "University of Southern California, Viterbi School of Engineering",
-            degree:    "Bachelor of Science in Computer Science and Business Administration",
+            degree:    "Bachelor of Science in Computer Science, Minor in Entrepreneurship",
             time:      "Fall 2015 – Present",
             place:     "Los Angeles, CA",
+            gpa:       "Junior"
           },
           {
             school:    "Saratoga High School",
@@ -121,11 +124,21 @@ $(function () {
           {
               icon: "fa-laptop",
               skills: [
-                { skill: "Java and C++" },
-                { skill: "Android Development" },
-                { skill: "HTML, CSS, JavaScript" },
-                { skill: "Backbone" },
-                { skill: "Microsoft Excel" }
+                { skill: "C++ and Java (Android)" },
+                { skill: "HTML/CSS/JavaScript" },
+                { skill: "JQuery/Web GL/Backbone/ReactJS/NodeJS" },
+                { skill: "MondoDB" },
+                { skill: "Python" }
+              ],
+          },
+          {
+              icon: "fa-futbol-o",
+              skills: [
+                { skill: "SEL in Education" },
+                { skill: "Philosophy" },
+                { skill: "Los Angeles"},
+                { skill: "Soccer" },
+                { skill: "Violin" },
               ],
           },
           {
@@ -133,15 +146,6 @@ $(function () {
               skills: [
                 { skill: "English" },
                 { skill: "Chinese" }
-              ],
-          },
-          {
-              icon: "fa-futbol-o",
-              skills: [
-                { skill: "Typography" },
-                { skill: "Soccer" },
-                { skill: "Philosophy" },
-                { skill: "Violin" }
               ],
           }
         ],
