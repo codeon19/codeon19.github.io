@@ -234,6 +234,7 @@ header {
 	background-blend-mode: luminosity;*/
   text-align: center;
   color: white;
+  min-height: 100%;
 }
 header .intro-text {
   padding-top: 100px;

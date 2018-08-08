@@ -32,9 +32,15 @@ $(function () {
 
         experienceItems: [
           {
+            company:    "Bloomberg LP",
+            position:   "Software Engineering Intern",
+            time:       "Summer 2018",
+            place:      "New York, NY"
+          },
+          {
             company:    "USC Institute for Creative Technologies",
             position:   "Student Researcher",
-            time:       "Fall 2017 - Present",
+            time:       "Fall 2017 - Spring 2018",
             place:      "Playa Vista, CA"
           },
           {
