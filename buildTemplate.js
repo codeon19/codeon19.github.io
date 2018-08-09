@@ -64,7 +64,7 @@ $(function () {
           },
           {
             company:    "Prospect Silicon Valley",
-            position:   "Software Engineering Project Coordinator Intern",
+            position:   "Project Management Intern",
             time:       "Summer 2016",
             place:      "San Jose, CA",
             bullets: [
@@ -102,7 +102,7 @@ $(function () {
             degree:    "Bachelor of Science in Computer Science, Minor in Entrepreneurship",
             time:      "Fall 2015 – Present",
             place:     "Los Angeles, CA",
-            gpa:       "Junior"
+            gpa:       "Senior"
           },
           {
             school:    "Saratoga High School",
@@ -165,8 +165,7 @@ $(function () {
         ],
 
         "email":                "breck@usc.edu",
-        "phone":                "(408)-858-3628",
-        "address":              "D534, 3131 S. McClintock Avenue, Los Angeles, CA 90007",
+        "phone":                "(408)-858-3628"
 
         socialItems: [
           {
