@@ -165,7 +165,7 @@ $(function () {
         ],
 
         "email":                "breck@usc.edu",
-        "phone":                "(408)-858-3628"
+        "phone":                "(408)-858-3628",
 
         socialItems: [
           {
