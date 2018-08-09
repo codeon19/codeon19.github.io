@@ -35,13 +35,21 @@ $(function () {
             company:    "Bloomberg LP",
             position:   "Software Engineering Intern",
             time:       "Summer 2018",
-            place:      "New York, NY"
+            place:      "New York, NY",
+            bullets: [
+                { bullet: "Automated live release Earnings/Economic Data into tables for the Breaking News Team" },
+                { bullet: "Full-stack application developed in Bloomberg technologies, JavaScript (R+), Python (BAS), and SQL (Comdb2)" }
+            ]
           },
           {
             company:    "USC Institute for Creative Technologies",
             position:   "Student Researcher",
             time:       "Fall 2017 - Spring 2018",
-            place:      "Playa Vista, CA"
+            place:      "Playa Vista, CA",
+            bullets: [
+                { bullet: "Developed pipeline for capturing the life experiences of STEM mentors into a project called MentorPal" },
+                { bullet: "Helped implement, train, and reduce an NLP model to provide a more immersive and streamlined experience" }
+            ]
           },
           {
             company:    "PlayStation",
