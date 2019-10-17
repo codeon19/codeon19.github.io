@@ -31,7 +31,7 @@ jQuery(document).ready(function($){
 				selected = word.hasClass('is-visible');
 			for (i in letters) {
 				if(word.parents('.rotate-2').length > 0) letters[i] = '<em>' + letters[i] + '</em>';
-				letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>': '<i>' + letters[i] + '</i>';
+				letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>' : '<i>' + letters[i] + '</i>';
 			}
 		    var newLetters = letters.join('');
 		    word.html(newLetters).css('opacity', 1);

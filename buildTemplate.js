@@ -32,6 +32,12 @@ $(function () {
 
         experienceItems: [
           {
+            company:    "Microsoft",
+            position:   "Program Manager",
+            time:       "Present",
+            place:      "Seattle, WA",
+          },
+          {
             company:    "Bloomberg LP",
             position:   "Software Engineering Intern",
             time:       "Summer 2018",
@@ -100,9 +106,8 @@ $(function () {
           {
             school:    "University of Southern California, Viterbi School of Engineering",
             degree:    "Bachelor of Science in Computer Science, Minor in Entrepreneurship",
-            time:      "Fall 2015 – Present",
-            place:     "Los Angeles, CA",
-            gpa:       "Senior"
+            time:      "Fall 2015 – May 2019",
+            place:     "Los Angeles, CA"
           },
           {
             school:    "Saratoga High School",
