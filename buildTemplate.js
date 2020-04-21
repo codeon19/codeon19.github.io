@@ -11,7 +11,7 @@ $(function () {
         "name":                 "Samuel Breck",
         "leadIn":                false,
         "headingLeft":           false, //true means heading is left aligned with a small column
-        "heading":               "Hi! I'm am Samuel",
+        "heading":               "Hi! I'm Samuel.",
         "showHeaderButton":     false,
         "headerButtonText":     "Show More",
 
