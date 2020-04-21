@@ -11,7 +11,7 @@ $(function () {
         "name":                 "Samuel Breck",
         "leadIn":                false,
         "headingLeft":           false, //true means heading is left aligned with a small column
-        "heading":               "Hi! I'm Samuel.",
+        "heading":               "Hi! I'm am Samuel",
         "showHeaderButton":     false,
         "headerButtonText":     "Show More",
 
@@ -34,7 +34,7 @@ $(function () {
           {
             company:    "Microsoft",
             position:   "Program Manager",
-            time:       "Present",
+            time:       "Fall 2019 - Present",
             place:      "Seattle, WA",
           },
           {
