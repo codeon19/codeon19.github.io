@@ -7,7 +7,8 @@ $(function () {
       Handlebars.registerPartial("header", $("#header-partial").html());
 
       // Define our data object
-      var context={
+      var context=
+      {
         "name":                 "Samuel Breck",
         "leadIn":                false,
         "headingLeft":           false, //true means heading is left aligned with a small column
@@ -44,7 +45,7 @@ $(function () {
             place:      "New York, NY",
             bullets: [
                 { bullet: "Automated live release Earnings/Economic Data into tables for the Breaking News Team" },
-                { bullet: "Full-stack application developed in Bloomberg technologies, JavaScript (R+), Python (BAS), and SQL (Comdb2)" }
+                { bullet: "Full-stack application developed in JavaScript (R+), Python (BAS), and SQL (Comdb2)" }
             ]
           },
           {
@@ -53,8 +54,8 @@ $(function () {
             time:       "Fall 2017 - Spring 2018",
             place:      "Playa Vista, CA",
             bullets: [
-                { bullet: "Developed pipeline for capturing the life experiences of STEM mentors into a project called MentorPal" },
-                { bullet: "Helped implement, train, and reduce an NLP model to provide a more immersive and streamlined experience" }
+                { bullet: "Developed pipeline capturing the life experiences of STEM mentors into Project MentorPal" },
+                { bullet: "Trained and reduced NLP model to increase mobile performance and improve UX" }
             ]
           },
           {
@@ -63,9 +64,10 @@ $(function () {
             time:       "Summer 2017",
             place:      "San Jose, CA",
             bullets: [
-                { bullet: "Planned, developed, tested, and launched minor/major features for the PlayStation Store team on the PS4 console" },
-                { bullet: "Worked as a front-end developer with XML/CSS, Web GL, and custom JavaScript frameworks"        },
-                { bullet: "Eliminated various defects associated with the PlayStation Store"        }
+                { bullet: "Developed MVP of PlayStation Store Search 2.0, later shipped to 60+ million customers" },
+                { bullet: "Collaborated with Product, Design, and QA to validate feature requirements" },
+                { bullet: "Identified and eliminated various defects associated with the PlayStation Store"},
+                { bullet: "Worked with XML/CSS, Web GL, and custom JavaScript frameworks"}
             ]
           },
           {
@@ -74,9 +76,9 @@ $(function () {
             time:       "Summer 2016",
             place:      "San Jose, CA",
             bullets: [
-                { bullet: "Worked on developing applications that combined Prospect Silicon Valley’s Intelligent Transportation Lab and fka Silicon Valley’s Simulation Lab (fka SV is an associated research group with Aachen University)"        },
-                { bullet: "Streamlined the client onboarding system and integrated various lead pipelines"        },
-                { bullet: "Conducted aggregate purchase surveys for prospective cities leasing EV Fleets"        }
+                { bullet: "Developed demo app showcasing DSRC technology in a simulated environment"},
+                { bullet: "Streamlined the client on-boarding system and integrated various lead pipelines"},
+                { bullet: "Conducted aggregate purchase surveys for prospective cities leasing EV Fleets"}
             ]
           },
           {
@@ -85,9 +87,9 @@ $(function () {
             time:       "Summer 2015, 2016",
             place:      "Santa Clara, CA",
             bullets: [
-              { bullet: "Learned HTML, CSS, and JavaScript with JQuery and Backbone framework"        },
-              { bullet: "Explored various API’s include Drop.js and Facebook login"        },
-              { bullet: "Designed logic of architecture involving asynchronous calls"        }
+              { bullet: "Learned HTML, CSS, and JavaScript with JQuery and Backbone framework" },
+              { bullet: "Explored various API’s include Drop.js and Facebook login" },
+              { bullet: "Designed logic of architecture involving asynchronous calls" }
             ]
           },
           {
