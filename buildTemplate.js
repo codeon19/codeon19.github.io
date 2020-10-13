@@ -44,18 +44,9 @@ $(function () {
             time:       "Summer 2018",
             place:      "New York, NY",
             bullets: [
-                { bullet: "Automated live release Earnings/Economic Data into tables for the Breaking News Team" },
+                { bullet: "Developed an automated pipeline for translating Earnings/Economic Data into a tabular format under the Bloomberg News Automation Team" },
+                { bullet: "Validated MVP w/ customers by through multiple demos and feedback sessions" },
                 { bullet: "Full-stack application developed in JavaScript (R+), Python (BAS), and SQL (Comdb2)" }
-            ]
-          },
-          {
-            company:    "USC Institute for Creative Technologies",
-            position:   "Student Researcher",
-            time:       "Fall 2017 - Spring 2018",
-            place:      "Playa Vista, CA",
-            bullets: [
-                { bullet: "Developed pipeline capturing the life experiences of STEM mentors into Project MentorPal" },
-                { bullet: "Trained and reduced NLP model to increase mobile performance and improve UX" }
             ]
           },
           {
@@ -64,10 +55,19 @@ $(function () {
             time:       "Summer 2017",
             place:      "San Jose, CA",
             bullets: [
-                { bullet: "Developed MVP of PlayStation Store Search 2.0, later shipped to 60+ million customers" },
-                { bullet: "Collaborated with Product, Design, and QA to validate feature requirements" },
-                { bullet: "Identified and eliminated various defects associated with the PlayStation Store"},
-                { bullet: "Worked with XML/CSS, Web GL, and custom JavaScript frameworks"}
+                { bullet: "Planned, developed, tested, and launched major/minor features for the PlayStation Store team on the PS4 console (PS Store Search 2.0, Credit Card validation)" },
+                { bullet: "Front-end development concentrated on scalability (60 million users) and framerate (60fps), developed in XML/CSS, Web GL, and a custom JavaScript framework" }
+            ]
+          },
+          {
+            company:    "USC Institute for Creative Technologies",
+            position:   "Student Researcher",
+            time:       "Fall 2017 - Spring 2018",
+            place:      "Playa Vista, CA",
+            bullets: [
+                { bullet: "Developed and built an “Alex for mentorship” research funded project for potential STEM high school students, mentorpal.org" },
+                { bullet: "Developed data-processing pipeline capturing the life experiences of STEM mentors" },
+                { bullet: "Helped implement, train, and reduce an NLP model to provide a more immersive and streamlined experience (Q/A improved from 47% to 61% perfect match accuracy; Google’s Word corpus reduced by 70% due to memory limits)" }
             ]
           },
           {
