@@ -108,7 +108,7 @@ $(function () {
           {
             school:    "University of Southern California, Viterbi School of Engineering",
             degree:    "Bachelor of Science in Computer Science, Minor in Entrepreneurship",
-            time:      "Fall 2015 – May 2019",
+            time:      "September 2015 – May 2019",
             place:     "Los Angeles, CA"
           },
           {
