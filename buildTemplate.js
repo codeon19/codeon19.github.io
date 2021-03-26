@@ -65,7 +65,7 @@ $(function () {
             time:       "Fall 2017 - Spring 2018",
             place:      "Playa Vista, CA",
             bullets: [
-                { bullet: "Developed and built an “Alex for mentorship” research funded project for potential STEM high school students, mentorpal.org" },
+                { bullet: "Developed and built an “Alexa for mentorship” research funded project for potential STEM high school students, mentorpal.org" },
                 { bullet: "Developed data-processing pipeline capturing the life experiences of STEM mentors" },
                 { bullet: "Helped implement, train, and reduce an NLP model to provide a more immersive and streamlined experience (Q/A improved from 47% to 61% perfect match accuracy; Google’s Word corpus reduced by 70% due to memory limits)" }
             ]
@@ -171,7 +171,7 @@ $(function () {
           }
         ],
 
-        "email":                "breck@usc.edu",
+        "email":                "samuelbreck19@gmail.com",
         "phone":                "(408)-858-3628",
 
         socialItems: [
