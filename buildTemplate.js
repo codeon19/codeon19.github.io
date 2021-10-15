@@ -34,7 +34,7 @@ $(function () {
         experienceItems: [
           {
             company:    "Microsoft",
-            position:   "Program Manager",
+            position:   "Program Manager 2",
             time:       "Fall 2019 - Present",
             place:      "Seattle, WA",
           },
