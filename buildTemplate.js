@@ -33,9 +33,15 @@ $(function () {
 
         experienceItems: [
           {
+            company:    "Valon",
+            position:   "Product Manager",
+            time:       "January 2022 - Present",
+            place:      "New York, NY",
+          },
+          {
             company:    "Microsoft",
-            position:   "Program Manager 2",
-            time:       "Fall 2019 - Present",
+            position:   "Product Manager",
+            time:       "Fall 2019 - December 2021",
             place:      "Seattle, WA",
           },
           {
@@ -107,7 +113,7 @@ $(function () {
         educationItems: [
           {
             school:    "University of Southern California, Viterbi School of Engineering",
-            degree:    "Bachelor of Science in Computer Science, Minor in Entrepreneurship",
+            degree:    "Bachelor of Science in Computer Science",
             time:      "September 2015 – May 2019",
             place:     "Los Angeles, CA"
           },
@@ -183,6 +189,10 @@ $(function () {
           {
             icon: "fa-linkedin",
             link: "https://www.linkedin.com/in/samuel-breck-164703109"
+          },
+          {
+            icon: "fa-university",
+            link: "https://scholar.google.com/citations?user=9bWFKCEAAAAJ&hl=en&citsig=ALAJMKFOM4MIIWHG9BPj8SUDJFW_"
           }
         ]
 
