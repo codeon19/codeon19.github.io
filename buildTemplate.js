@@ -88,24 +88,13 @@ $(function () {
             ]
           },
           {
-            company:    "CSchedule",
-            position:   "Software Engineering Intern",
-            time:       "Summer 2015, 2016",
-            place:      "Santa Clara, CA",
-            bullets: [
-              { bullet: "Learned HTML, CSS, and JavaScript with JQuery and Backbone framework" },
-              { bullet: "Explored various API’s include Drop.js and Facebook login" },
-              { bullet: "Designed logic of architecture involving asynchronous calls" }
-            ]
-          },
-          {
             company:    "TPK Touch Solutions, Inc.",
             position:   "Project Management Intern",
             time:       "Summer 2014",
             place:      "Xiamen, China",
             bullets: [
-              { bullet: "Developed Project Management skills involving production of touchscreens"        },
-              { bullet: "Analyzed case studies concerning lifecycle of a product from DVT to fulfillment"        }
+              { bullet: "Spearheaded project management initiatives in the development and production of cutting-edge touchscreens"  },
+              { bullet: "Conducted in-depth analysis of case studies covering the entire product lifecycle, from Design Validation Testing (DVT) to fulfillment" }
             ]
           }
         ],
