@@ -7,531 +7,1046 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title></title>
+  <title>Samuel Breck</title>
 
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/agency.css" rel="stylesheet">
-  <!-- <link rel="icon" href="http://www.cubed.work/favicon/favicon.ico" type="image/x-icon"/>
-  <link rel="shortcut icon" href="http://www.cubed.work/favicon/favicon.ico" type="image/x-icon"/> -->
-
-  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap CSS from CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome from CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  
+  <!-- Google Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Bitter:400,700,400italic|Raleway:400,700,800' rel='stylesheet' type='text/css'>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <!-- Custom CSS -->
+  <style>
+    body {
+      overflow-x: hidden;
+      font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    div {
+        display: block;
+    }
+    .text-muted {
+      color: #777;
+    }
+    .text-primary {
+      color: #4A9CEE;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.75;
+    }
+    p.large {
+      font-size: 16px;
+    }
+    p.intro {
+      font-size: 24px;
+    }
+    a,
+    a:hover,
+    a:focus,
+    a:active,
+    a.active {
+      outline: none;
+      text-decoration: none;
+    }
+    a {
+        color: #4A9CEE;
+    }
+
+    a:hover,
+    a:focus,
+    a:active,
+    a.active {
+      color: #007acc;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+    }
+    .img-centered {
+      margin: 0 auto;
+    }
+    .bg-light-gray {
+      background-color: #f7f7f7;
+    }
+    .bg-darkest-gray {
+      background-color: #222;
+    }
+    .btn-primary {
+      color: white;
+      background-color: #4A9CEE;
+      border-color: #4A9CEE;
+      font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open .dropdown-toggle.btn-primary {
+      color: white;
+      background-color: #007acc;
+      border-color: #0074c2;
+    }
+    .btn-primary:active,
+    .btn-primary.active,
+    .open .dropdown-toggle.btn-primary {
+      background-image: none;
+    }
+    .btn-primary.disabled,
+    .btn-primary[disabled],
+    fieldset[disabled] .btn-primary,
+    .btn-primary.disabled:hover,
+    .btn-primary[disabled]:hover,
+    fieldset[disabled] .btn-primary:hover,
+    .btn-primary.disabled:focus,
+    .btn-primary[disabled]:focus,
+    fieldset[disabled] .btn-primary:focus,
+    .btn-primary.disabled:active,
+    .btn-primary[disabled]:active,
+    fieldset[disabled] .btn-primary:active,
+    .btn-primary.disabled.active,
+    .btn-primary[disabled].active,
+    fieldset[disabled] .btn-primary.active {
+      background-color: #4A9CEE;
+      border-color: #4A9CEE;
+    }
+    .btn-primary .badge {
+      color: #4A9CEE;
+      background-color: white;
+    }
+    .btn-xl {
+      color: white;
+      background-color: #4A9CEE;
+      border-color: #4A9CEE;
+      font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      border-radius: 3px;
+      font-size: 18px;
+      padding: 20px 40px;
+    }
+    .btn-xl:hover,
+    .btn-xl:focus,
+    .btn-xl:active,
+    .btn-xl.active,
+    .open .dropdown-toggle.btn-xl {
+      color: white;
+      background-color: #007acc;
+      border-color: #0074c2;
+    }
+    .btn-xl:active,
+    .btn-xl.active,
+    .open .dropdown-toggle.btn-xl {
+      background-image: none;
+    }
+    .btn-xl.disabled,
+    .btn-xl[disabled],
+    fieldset[disabled] .btn-xl,
+    .btn-xl.disabled:hover,
+    .btn-xl[disabled]:hover,
+    fieldset[disabled] .btn-xl:hover,
+    .btn-xl.disabled:focus,
+    .btn-xl[disabled]:focus,
+    fieldset[disabled] .btn-xl:focus,
+    .btn-xl.disabled:active,
+    .btn-xl[disabled]:active,
+    fieldset[disabled] .btn-xl:active,
+    .btn-xl.disabled.active,
+    .btn-xl[disabled].active,
+    fieldset[disabled] .btn-xl.active {
+      background-color: #4A9CEE;
+      border-color: #4A9CEE;
+    }
+    .btn-xl .badge {
+      color: #4A9CEE;
+      background-color: white;
+    }
+    .navbar-default {
+      background-color: #222;
+      border-color: transparent;
+    }
+    .navbar-default .navbar-brand {
+      color: white;
+      border-radius: 10px;
+      font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .navbar-default .navbar-brand:hover,
+    .navbar-default .navbar-brand:focus,
+    .navbar-default .navbar-brand:active,
+    .navbar-default .navbar-brand.active {
+      color: #ffdb4d;
+    }
+    .navbar-default .navbar-collapse {
+      border-color: rgba(255, 255, 255, 0.02);
+    }
+    .navbar-default .navbar-toggle {
+      background-color: #4A9CEE;
+      border-color: #4A9CEE;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+      background-color: white;
+    }
+    .navbar-default .navbar-toggle:hover,
+    .navbar-default .navbar-toggle:focus {
+      background-color: #4A9CEE;
+    }
+    .navbar-default .nav li a {
+      font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: white;
+    }
+    .navbar-default .nav li a:hover,
+    .navbar-default .nav li a:focus {
+      color: #ffdb4d;
+      outline: none;
+    }
+    .navbar-default .navbar-nav > .active > a {
+      border-radius: 0;
+      color: white;
+      background-color: #4A9CEE;
+    }
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+      color: white;
+      background-color: #4A9CEE;
+    }
+    @media (min-width: 768px) {
+      .navbar-default {
+        background-color: transparent;
+        padding: 25px 0;
+        -webkit-transition: padding 0.3s, background-color 0.3s;
+        -moz-transition: padding 0.3s, background-color 0.3s;
+        transition: padding 0.3s, background-color 0.3s;
+        border: none;
+      }
+      .navbar-default .navbar-brand {
+        font-size: 2em;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+      .navbar-default .navbar-nav > .active > a {
+        border-radius: 3px;
+      }
+      .navbar-default.navbar-shrink {
+        background-color: #222;
+        padding: 10px 0;
+      }
+      .navbar-default.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+      }
+    }
+    header {
+        background-color: #4A9CEE;
+      text-align: center;
+      color: white;
+      height: 100vh;
+    }
+    header .intro-text {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    header .intro-text .intro-lead-in {
+      font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-style: italic;
+      font-size: 22px;
+      line-height: 22px;
+      margin-bottom: 25px;
+    }
+    header .intro-text .intro-heading {
+      font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 50px;
+    }
+    @media (min-width: 768px) {
+      header .intro-text {
+        padding-top: 200px;
+        padding-bottom: 100px;
+      }
+      header .intro-text .intro-lead-in {
+        font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-style: italic;
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 25px;
+      }
+      header .intro-text .intro-heading {
+        font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 75px;
+        line-height: 75px;
+      }
+    }
+    section {
+      padding: 75px 0;
+    }
+    section h2.section-heading {
+      font-size: 40px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    section h3.section-subheading {
+      font-size: 25px;
+      font-weight: 400;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+    @media (min-width: 768px) {
+      section {
+        padding: 75px 0;
+      }
+    }
+    .service-heading {
+      margin: 15px 0;
+      text-transform: none;
+    }
+    .experience-panel {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+    .experience-panel .experience-heading {
+      vertical-align: bottom;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    .experience-panel .experience-heading h4 {
+      display: inline-block;
+      float: right;
+      text-align: right;
+      vertical-align: top;
+      font-size: 13pt;
+    }
+    .experience-panel .experience-heading h5 {
+      display: inline-block;
+      font-size: 15pt;
+    }
+    .experience-panel .experience-heading h6 {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+    .education-panel {
+      padding-bottom: 50px;
+    }
+    .education-panel .education-heading {
+      vertical-align: bottom;
+      margin-bottom: 0.5em;
+      width: 100%;
+    }
+    .education-panel .education-heading h4 {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 18pt;
+      line-height: 1.5em;
+      margin-bottom: 0;
+    }
+    .education-panel .education-heading h5 {
+      display: inline-block;
+      font-size: 13pt;
+      line-height: 1.5em;
+      margin-bottom: 0;
+    }
+    .education-panel .education-heading h6 {
+      display: inline-block;
+      line-height: 1.5em;
+      margin-bottom: 0;
+    }
+    .big-icon {
+      font-size: 128px;
+      line-height: 1;
+    }
+    .awards-panel {
+      margin-top: -10px;
+    }
+    .panel-padded {
+      padding: 0 20px;
+    }
+    ::-moz-selection {
+      text-shadow: none;
+      background: #4A9CEE;
+    }
+    ::selection {
+      text-shadow: none;
+      background: #4A9CEE;
+    }
+    img::selection {
+      background: transparent;
+    }
+    img::-moz-selection {
+      background: transparent;
+    }
+
+    body {
+      webkit-tap-highlight-color: #4A9CEE;
+    }
+
+    .cd-intro {
+      width: 90%;
+      max-width: 768px;
+      text-align: center;
+    }
+
+    .cd-intro {
+      margin: 1em auto;
+    }
+    @media only screen and (min-width: 768px) {
+      .cd-intro {
+        margin: 1.5em auto;
+      }
+    }
+    @media only screen and (min-width: 1170px) {
+      .cd-intro {
+        margin: 1.5em auto;
+      }
+    }
+
+    .cd-headline {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+    @media only screen and (min-width: 768px) {
+      .cd-headline {
+        font-size: 4.4rem;
+        font-weight: 300;
+      }
+    }
+    @media only screen and (min-width: 1170px) {
+      .cd-headline {
+        font-size: 5rem;
+      }
+    }
+
+    .cd-words-wrapper {
+      display: inline-block;
+      position: relative;
+      text-align: left;
+    }
+    .cd-words-wrapper b {
+      display: inline-block;
+      position: absolute;
+      white-space: nowrap;
+      left: 0;
+      top: 0;
+    }
+    .cd-words-wrapper b.is-visible {
+      position: relative;
+    }
+    .no-js .cd-words-wrapper b {
+      opacity: 0;
+    }
+    .no-js .cd-words-wrapper b.is-visible {
+      opacity: 1;
+    }
+
+    .cd-headline.clip span {
+      display: inline-block;
+      padding: .2em 0;
+      vertical-align: middle;
+    }
+    .cd-headline.clip .cd-words-wrapper {
+      overflow: hidden;
+      vertical-align: middle;
+    }
+    .cd-headline.clip .cd-words-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background-color: #aebcb9;
+    }
+    .cd-headline.clip b {
+      opacity: 0;
+    }
+    .cd-headline.clip b.is-visible {
+      opacity: 1;
+    }
+
+    div.download-button {
+        margin: 0.5em auto;
+        height: auto;
+    }
+
+    a.button-ghost-white{
+        margin: 6rem 0 0;
+        margin-top: 6rem;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        padding: 1.2rem 3.2rem;
+        font-size: 1.3rem;
+        color: #fff;
+        border: 3px solid #fff;
+        text-decoration: none;
+        white-space: nowrap;
+        background-color: transparent;
+        height: auto;
+        line-height: normal;
+        text-transform: uppercase;
+        font-family: Montserrat,sans-serif;
+        font-weight: 700;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        letter-spacing: .1rem;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        box-sizing: border-box;
+    }
+
+    a.button-ghost-white:hover{
+        /* Maintain same padding and margin as normal state to prevent shrinking */
+        padding: 1.2rem 3.2rem;
+        margin: 6rem 0 0;
+        color: #4A9CEE;
+        background-color: #fff;
+    }
+
+    .fa.fa-heart:before {
+        content: "\f004";
+    }
+  </style>
+
   <!-- jQuery -->
-  <script src="js/jquery.js"></script>
-  <script src="buildTemplate.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <!-- jQuery Easing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+</head>
 
-<!--This is our template. -->
-<!--Data will be inserted in its according place, replacing the brackets.-->
-<script id="address-template" type="text/x-handlebars-template">
-<body>
-<nav id="nav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">{{name}}</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    {{#each navItems}}
-                      <li>
-                        <a class="page-scroll" href="#{{name}}">{{name}}</a>
-                      </li>
-                    {{/each}}
-
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<body id="page-top" class="index" data-spy="scroll" data-target="nav">
+  <nav id="nav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">Samuel Breck</a>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
 
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="row">
-                  {{#if headingLeft}}
-                    <div class="col-md-4 col-sm-4 text-left">
-                  {{else}}
-                    <div class="col-md-12 col-sm-12 text-center">
-                  {{/if}}
-                      {{#if leadIn}}
-                        <div class="intro-lead-in">
-                            {{leadIn}}
-                        </div>
-                      {{/if}}
-                        <div class="intro-heading">
-                          {{#if heading}}
-                            {{heading}}
-                          {{else}}
-                            {{name}}
-                          {{/if}}
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                  <a class="page-scroll" href="#Experience">Experience</a>
+                </li>
+                <li>
+                  <a class="page-scroll" href="#Education">Education</a>
+                </li>
+                <li>
+                  <a class="page-scroll" href="#Skills">Skills</a>
+                </li>
+                <li>
+                  <a class="page-scroll" href="#Projects">Projects</a>
+                </li>
+                <li>
+                  <a class="page-scroll" href="#Contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
 
-
-                        </div>
-
-                        <!-- cd-intro -->
-
-                        <div>
-                            <section class="cd-intro">
-                              <h1 class="cd-headline clip is-full-width">
-                                <span>I am a Product Manager</span><br>
-                                <span>that </span>
-                                <span class="cd-words-wrapper">
-                                  <b class="is-visible">always asks, Why?</b>
-                                  <b>moves fast</b>
-                                  <b>is data driven</b>
-                                  <b>iterates and improves</b>
-                                </span>
-                              </h1>
-                            </section>
-                        </div>
-
-                        <div class="download-button">
-                            <a class="button button-ghost-white" href="resume/Samuel_Breck_Resume.pdf">My Resume</a>
-                        </div>
-                        
-                        </div>
+  <header>
+      <div class="container">
+          <div class="intro-text">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 text-center">
+                    <div class="intro-heading">
+                      Hi! I'm Samuel.
                     </div>
-                {{#if showHeaderButton}}
-                <a href="#portfolio" class="page-scroll btn btn-xl">{{headerButtonText}}</a>
-                {{/if}}
-        </div>
-    </header>
 
-    <!-- Portfolio Grid Section -->
-    {{#if portfolioItems}}
-    <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Here are some projects I&#39;ve worked on.</h3>
-                </div>
-            </div>
-            <div class="row">
-              {{#each portfolioItems}}
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                    {{#if link}}
-                      <a href="http://landonbrand.github.io/Bit-Vision/" class="portfolio-link" target="_blank">
-                    {{else}}
-                      <a href="#portfolioModal{{inc @index}}" class="portfolio-link" data-toggle="modal">
-                    {{/if}}
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img src="img/portfolio/{{inc @index}}/preview.jpg" class="img-responsive" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>{{name}}</h4>
-                          <p class="text-muted">{{subtext}}</p>
-                      </div>
-                  </div>
-                {{/each}}
-            </div>
-        </div>
-    </section>
-    {{/if}}
-
-     <!-- Experience Section -->
-     {{#if showExperienceSection}}
-    <section id="Experience">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">{{experienceHeading}}</h2>
-                    <h3 class="section-subheading text-muted">{{experienceSubHeading}}</h3>
-                </div>
-            </div>
-            <div class="row">
-                <br/>
-                <div class="col-md-1">
-                </div>
-                <div class="col-md-10">
-                {{#each experienceItems}}
-                    <div class="experience-panel">
-                        <div class="experience-heading">
-                            <h5 class="subheading">{{company}}</h5>
-                            <h4>{{time}}</h4>
-                            <br/>
-                            <h6>{{position}}</h6>
-                            <br/>
-                            {{#if place}}
-                               <h6>{{place}}</h6>
-                                <br/>
-                            {{/if}}
-
-                        </div>
-                        <div class="timeline-body">
-                            {{#each bullets}}
-                              <p>{{bullet}}</p>
-                            {{/each}}
-                        </div>
-                    </div>
-                  {{/each}}
-                </div>
-            </div>
-        </div>
-    </section>
-    {{/if}}
-
-    <section class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-1"></div>
-                    {{#if awardItems}}
-                      <div class="col-md-5">
-                        <section id="education" class="text-left">
-                    {{else}}
-                     <div class="col-md-12">
-                        <section id="Education" class="text-center">
-                    {{/if}}
-                            <h2 class="section-heading ">Education</h2>
-                            <br/>
-                            {{#each educationItems}}
-                            <div class="education-panel">
-                                <div class="education-heading">
-                                    {{#if ../awardItems}}
-                                        <h4>{{school}}</h4>
-                                        {{#if degree}}
-                                          <br/>
-                                          <h5>{{degree}}</h5>
-                                        {{/if}}
-                                        {{#if minor}}
-                                          <br/>
-                                          <h5>{{minor}}</h5>
-                                        {{/if}}
-                                        <br/>
-                                        <h6>{{time}}</h6>
-                                        {{#if place}}
-                                          <br/>
-                                          <h6>{{place}}</h6>
-                                        {{/if}}
-                                        <br/>
-                                    {{else}}
-                                      <div class="col-md-12">
-                                          <div class="col-md-10 text-left">
-                                              <h4>{{school}}</h4>
-                                              {{#if degree}}
-                                                <br/>
-                                                <h5 class="text-muted">{{degree}}</h5>
-                                              {{/if}}
-                                              {{#if minor}}
-                                                <br/>
-                                                <h5 class="text-muted">{{minor}}</h5>
-                                              {{/if}}
-                                          </div>
-                                          <div class="col-md-2 text-right">
-                                              <h6>{{time}}</h6>
-                                              {{#if place}}
-                                                <br/>
-                                                <h6>{{place}}</h6>
-                                              {{/if}}
-                                               {{#if gpa}}
-                                                <br/>
-                                                <h6>{{gpa}}</h6>
-                                              {{/if}}
-                                          </div>
-                                      </div>
-                                    {{/if}}
-                                </div>
-                            </div>
-                            {{/each}}
+                    <!-- cd-intro -->
+                    <div>
+                        <section class="cd-intro">
+                          <h1 class="cd-headline clip is-full-width">
+                            <span>I am a Product Manager</span><br>
+                            <span>that </span>
+                            <span class="cd-words-wrapper">
+                              <b class="is-visible">always asks, Why?</b>
+                              <b>moves fast</b>
+                              <b>is data driven</b>
+                              <b>iterates and improves</b>
+                            </span>
+                          </h1>
                         </section>
                     </div>
-                {{#if awardItems}}
-                    <div class="col-md-6">
-                        <section class="text-left">
-                            <h2 class="section-heading ">Awards</h2>
-                            <br/>
-                            <div class="awards-panel ">
-                              {{#each awardItems}}
-                                <h4><strong>{{award}}</strong> </h4>
-                                <h6>{{time}}</h6>
-                                <br/><br/><br/>
-                              {{/each}}
-                            </section>
+
+                    <div class="download-button">
+                        <a class="button button-ghost-white" href="resume/Samuel_Breck_Resume.pdf">My Resume</a>
                     </div>
-                {{/if}}
-
-             </div>
-        </div>
-    </section>
-
-    <section id="Skills">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">{{skillsHeading}}</h2>
-                    <br/>
-                </div>
-            </div>
-            <div class="row text-center">
-              {{#each skillItems}}
-                <div class={{../skillColumnType}}>
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa {{icon}} fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <br/>
-                    <br/>
-                    {{#each skills}}
-                      <p class="text-muted">{{skill}}</p>
-                    {{/each}}
-                </div>
-              {{/each}}
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="bg-light-gray" id="Projects">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Projects</h2>
-                </div>
-            </div>
-            <div class="row">
-                <br/>
-                <div class="col-md-1">
-                </div>
-                <div class="col-md-10">
-                    <div class="experience-panel">
-
-                        <div class="col-lg-12 text-center">
-                          <h3 class="section-subheading text-muted"> Publications </h3>
-                        </div>
-
-                        <div class="timeline-body">
-                            <p> Kaimakis, N.J., Davis, D.M., Breck, S. & Nye, B.D. (2018). "Domain-Specific Reduction of Language Model Databases: Overcoming Chatbot Implementation Obstacles". In the Proceedings of the ModSim World Conference, Norfolk, Virginia. </p>
-                        </div>
-
-                        <div class="timeline-body">
-                            <p> Breck, S., Carr, K., Davis, D. M., Nordhagen, J. N., and Nye, B. D. (2018). "Virtual Mentors in a Real STEM Fair: Experiences, Challenges, and Opportunities". In Third International Workshop on Intelligent Mentoring Systems (IMS 2018) Proceedings. </p>
-                        </div>
-
-                        <div class="col-lg-12 text-center">
-                          <h3 class="section-subheading text-muted"> Technical Projects </h3>
-                        </div>
-
-                        <div class="experience-heading">
-                            <h5 class="subheading"><a href="https://boxi.co/" target="_blank">Boxi</a></h5>
-                            <h4> April 2020 - Present</h4>
-                            <br/>
-                        </div>
-                        <div class="timeline-body">
-                            <p> Developed new landing page to increase online/organic sales for truck advertising company, boxi.co. PO of online dashboard so clients can track their routes, impressions, and miles driven. </p>
-                        </div>
-
-                        <div class="experience-heading">
-                            <h5 class="subheading"><a href="https://giveduet.org/" target="_blank">Duet</a></h5>
-                            <h4>January 2019 - May 2019</h4>
-                            <br/>
-                        </div>
-                        <div class="timeline-body">
-                            <p> Developed donate, checkout, and inventory process for non-profit organization, giveduet.org as part of senior capstone project. Duet is a website to help people provide direct support to resettled refugees. </p>
-
-                        </div>
-
-                        <div class="experience-heading">
-                            <h5 class="subheading"><a href="https://www.youtube.com/watch?v=_bQz-9nY8TU" target="_blank">Tommy Bot</a></h5>
-                            <h4>September 2016 - January 2018</h4>
-                            <br/>
-                        </div>
-                        <div class="timeline-body">
-                            <p> Messenger chatbot for all things related to USC (building location/hours, menus, events, etc.). 50,000 total interactions since launch in Jan 2017, $10,000 in funding from USC Iovine and Young pitch competition. Part of LavaLab's F16 cohort, USC's highly selective student run incubator. </p>
-
-                        </div>
-
-                        <div class="experience-heading">
-                            <h5 class="subheading"><a href="https://github.com/codeon19/eYak" target="_blank">eYak</a></h5>
-                            <h4>April 2017</h4>
-                            <br/>
-                        </div>
-                        <div class="timeline-body">
-                            <p> This project was first incepted during LAHacks2017 and completed for the Scope USC Demo night. eYak is a way for students to ask questions during a classroom session anonymously. Think of it as a combination of the functionality of Piazza and the interface of Yik Yak. </p>
-
-                        </div>
-
-                        <div class="experience-heading">
-                            <h5 class="subheading"><a href="https://github.com/Vadman97/SCal" target="_blank">Scal.tech</a></h5>
-                            <h4>November - December 2016</h4>
-                            <br/>
-                        </div>
-                        <div class="timeline-body">
-                          <p>
-                            This interactive calendar application was built for my CS 201 Principles of Software Devleopment class. The web application contains many of the same features as Google calendar including creating events and sharing them with others. We decided to add increased functionality by allowing for a user to import their USC-specific classes, recieve real-time study notifications, import events from an ICS reader, and recieve study recommendations.
-                          </p>
-
-                        </div>
-
-                        <div class="experience-heading">
-                            <h5 class="subheading"><a href="https://devpost.com/software/split-lj6mwo" target="_blank">Split</a></h5>
-                            <h4>November 2016</h4>
-                            <br/>
-                        </div>
-                        <div class="timeline-body">
-                          <p> This project was a Cal Hacks 3.0 project along with 4 other USC students and my first time using Swift and XCode. Swift is an easy to use receipt parsing iOS app using Microsoft Computer Vision API to parse text/relative position in image. In addition to the Computer Visiion API, we used imgur to post and host images using an HTTP POST request to their API. </p>
-
-                        </div>
-
-                        <div class="experience-heading">
-                            <h5 class="subheading"><a href="https://github.com/codeon19/TransitPriority" target="_blank">Transit Priority</a></h5>
-                            <h4>July 2016</h4>
-                            <br/>
-                        </div>
-                        <div class="timeline-body">
-                              <p>Developed a vehicle interface through an android application to demonstrate the possible applications of DSRC technology with Transit Vehicles. Application gives priority to a Transit Vehicle at an intersection via V2R communication through modification of the standard protocol BSM broadcasted by the DSRC OBU and modification of traffic control logic to optimize traffic flow. </p>
-
-                        </div>
-
-                        <div class="col-lg-12 text-center">
-                            <h3 class="section-subheading text-muted"> Other Projects </h3>
-                        </div>
-
-                        <div class="experience-heading">
-                            <h5 class="subheading"><a href="http://www.haroldrobinsonfoundation.org/" target="_blank">Harold Robinson Foundation</a></h5>
-                            <h4>September 2016 - December 2016</h4>
-                            <br/>
-                        </div>
-                        <div class="timeline-body">
-                            <p> As Team Leader, I managed this team to help the Harold Robinson Foundation (HRF) develop impact metrics to measure their program impact. HRF came to LACI in order to start measuring different data points of their youth development programming. We managed to identify these different data points and provide a preliminary measurement for HRF. In addition, we built a impact metrics database in order to provide HRF with the tools to keep track of the data they collect as well as illustrate, condense, and evaluate the measured data.  </p>
-
-                        </div>
-
-                        <div class="experience-heading">
-                            <h5 class="subheading"><a href="http://beatthestreets-la.org/" target="_blank">Beat the Streets Los Angeles</a></h5>
-                            <h4>January 2016 - May 2016</h4>
-                            <br/>
-                        </div>
-                        <div class="timeline-body">
-                              <p>BTSLA approached LACI with the idea of making their programs more holistic and impactful through the addition of a program that would be supplementary to their current wrestling instruction. In order to develop the necessary recommendation for what to teach, how to teach, and how to implement the supplementary program, we conducted intensive research from the following methodologies: online research, numerous phone and in-person interviews, USC professors and academic papers.</p>
-
-                        </div>
-
-                        <div class="experience-heading">
-                            <h5 class="subheading"><a href="http://www.monkeybusinesscafe.org/" target="_blank">Monkey Business Cafe</a></h5>
-                            <h4>September 2015 - December 2015</h4>
-                            <br/>
-                        </div>
-                        <div class="timeline-body">
-                              <p>In order to help Monkey Business Cafe to achieve its goal as a social enterprise serving at-risk youth through its workforce development program, we sought to increase revenue by addressing a couple of key needs. Monkey Business Cafe came to LACI hoping to market for recently opened evening hours and strengthen the newly streamlined catering business. Our project tackles these needs through intensive market research and strategic planning to address Monkey Business Cafe's most important needs.</p>
-
-                        </div>
+                    
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+      </div>
+  </header>
 
-    <!-- Contact Section -->
-    <section id="Contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contact</h2>
+  <!-- Experience Section -->
+  <section id="Experience">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">Experience</h2>
+                  <h3 class="section-subheading text-muted"></h3>
+              </div>
+          </div>
+          <div class="row">
+              <br/>
+              <div class="col-md-1">
+              </div>
+              <div class="col-md-10">
+              <div class="experience-panel">
+                <div class="experience-heading">
+                    <h5 class="subheading">Flow</h5>
+                    <h4>June 2025 - Present</h4>
+                    <br/>
+                    <h6>Product Manager</h6>
+                    <br/>
+                    <h6>New York, NY</h6>
                     <br/>
                 </div>
             </div>
-            <div class="row text-center">
-                <h4>Email: <a href="mailto:{{email}}" target="_blank">{{email}}</a></h4>
-                {{#if phone}}
-                  <h4>Phone: {{phone}}</h4>
-                {{/if}}
-                {{#if address}}
-                  <h4>{{address}}</h4>
-                {{/if}}
+              <div class="experience-panel">
+                  <div class="experience-heading">
+                      <h5 class="subheading">Valon</h5>
+                      <h4>January 2022 - February 2025</h4>
+                      <br/>
+                      <h6>Product Manager</h6>
+                      <br/>
+                      <h6>New York, NY</h6>
+                      <br/>
+                  </div>
+              </div>
+              <div class="experience-panel">
+                  <div class="experience-heading">
+                      <h5 class="subheading">Microsoft</h5>
+                      <h4>Fall 2019 - December 2021</h4>
+                      <br/>
+                      <h6>Product Manager</h6>
+                      <br/>
+                      <h6>Seattle, WA</h6>
+                      <br/>
+                  </div>
+              </div>
+              <div class="experience-panel">
+                  <div class="experience-heading">
+                      <h5 class="subheading">Bloomberg LP</h5>
+                      <h4>Summer 2018</h4>
+                      <br/>
+                      <h6>Software Engineering Intern</h6>
+                      <br/>
+                      <h6>New York, NY</h6>
+                      <br/>
+                  </div>
+                  <div class="timeline-body">
+                      <p>Developed an automated pipeline for translating Earnings/Economic Data into a tabular format under the Bloomberg News Automation Team</p>
+                      <p>Validated MVP w/ customers by through multiple demos and feedback sessions</p>
+                      <p>Full-stack application developed in JavaScript (R+), Python (BAS), and SQL (Comdb2)</p>
+                  </div>
+              </div>
+              <div class="experience-panel">
+                  <div class="experience-heading">
+                      <h5 class="subheading">PlayStation</h5>
+                      <h4>Summer 2017</h4>
+                      <br/>
+                      <h6>Software Engineering Intern</h6>
+                      <br/>
+                      <h6>San Jose, CA</h6>
+                      <br/>
+                  </div>
+                  <div class="timeline-body">
+                      <p>Planned, developed, tested, and launched major/minor features for the PlayStation Store team on the PS4 console (PS Store Search 2.0, Credit Card validation)</p>
+                      <p>Front-end development concentrated on scalability (60 million users) and framerate (60fps), developed in XML/CSS, Web GL, and a custom JavaScript framework</p>
+                  </div>
+              </div>
+              <div class="experience-panel">
+                  <div class="experience-heading">
+                      <h5 class="subheading">USC Institute for Creative Technologies</h5>
+                      <h4>Fall 2017 - Spring 2018</h4>
+                      <br/>
+                      <h6>Student Researcher</h6>
+                      <br/>
+                      <h6>Playa Vista, CA</h6>
+                      <br/>
+                  </div>
+                  <div class="timeline-body">
+                      <p>Developed and built an "Alexa for mentorship" research funded project for potential STEM high school students, mentorpal.org</p>
+                      <p>Developed data-processing pipeline capturing the life experiences of STEM mentors</p>
+                      <p>Helped implement, train, and reduce an NLP model to provide a more immersive and streamlined experience (Q/A improved from 47% to 61% perfect match accuracy; Google's Word corpus reduced by 70% due to memory limits)</p>
+                  </div>
+              </div>
+              </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="bg-light-gray">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-12">
+                  <section id="Education" class="text-center">
+                      <h2 class="section-heading ">Education</h2>
+                      <br/>
+                      <div class="education-panel">
+                          <div class="education-heading">
+                              <div class="col-md-12">
+                                  <div class="col-md-10 text-left">
+                                      <h4>University of Southern California, Viterbi School of Engineering</h4>
+                                      <br/>
+                                      <h5 class="text-muted">Bachelor of Science in Computer Science</h5>
+                                  </div>
+                                  <div class="col-md-2 text-right">
+                                      <h6>September 2015 – May 2019</h6>
+                                      <br/>
+                                      <h6>Los Angeles, CA</h6>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="education-panel">
+                          <div class="education-heading">
+                              <div class="col-md-12">
+                                  <div class="col-md-10 text-left">
+                                      <h4>Saratoga High School</h4>
+                                  </div>
+                                  <div class="col-md-2 text-right">
+                                      <h6>June 2015</h6>
+                                      <br/>
+                                      <h6>Saratoga, CA</h6>
+                                      <br/>
+                                      <h6>Graduated with Honors</h6>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </section>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section id="Skills">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">Skills & Interests</h2>
                   <br/>
-                {{#each socialItems}}
-                  <a href="{{link}}" target="_blank">
-                    <span class="fa-stack fa-2x">
-                        <i class="fa fa-square fa-stack-2x text-primary"></i>
-                        <i class="fa {{icon}} fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </a>
-                {{/each}}
-            </div>
-        </div>
-    </section>
+              </div>
+          </div>
+          <div class="row text-center">
+              <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                      <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <br/>
+                  <br/>
+                  <p class="text-muted">C++ and Java (Android)</p>
+                  <p class="text-muted">HTML/CSS/JavaScript</p>
+                  <p class="text-muted">JQuery/Web GL/Backbone/ReactJS/NodeJS</p>
+                  <p class="text-muted">MondoDB</p>
+                  <p class="text-muted">Python</p>
+              </div>
+              <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                      <i class="fa fa-futbol-o fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <br/>
+                  <br/>
+                  <p class="text-muted">SEL in Education</p>
+                  <p class="text-muted">Philosophy</p>
+                  <p class="text-muted">Los Angeles</p>
+                  <p class="text-muted">Soccer</p>
+                  <p class="text-muted">Violin</p>
+              </div>
+              <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                      <i class="fa fa-language fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <br/>
+                  <br/>
+                  <p class="text-muted">English</p>
+                  <p class="text-muted">Chinese</p>
+              </div>
+          </div>
+      </div>
+  </section>
 
-    <footer id="contact" >
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p class="copyright">Handmade with <i class="fa fa-heart"></i></p>
-                    <p class="copyright">Samuel Breck | 2024</p>
-                </div>
+  <!-- Projects Section -->
+  <section class="bg-light-gray" id="Projects">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">Projects</h2>
+              </div>
+          </div>
+          <div class="row">
+              <br/>
+              <div class="col-md-1">
+              </div>
+              <div class="col-md-10">
+                  <div class="experience-panel">
 
-            </div>
-        </div>
-    </footer>
+                      <div class="col-lg-12 text-center">
+                        <h3 class="section-subheading text-muted"> Publications </h3>
+                      </div>
 
-    <!-- Portfolio Modal -->
-    {{#each portfolioItems}}
-    <div class="portfolio-modal modal fade" id="portfolioModal{{inc @index}}" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>{{name}}</h2>
-                            <p class="item-intro text-muted">{{subtext}}</p>
+                      <div class="timeline-body">
+                          <p> Kaimakis, N.J., Davis, D.M., Breck, S. & Nye, B.D. (2018). "Domain-Specific Reduction of Language Model Databases: Overcoming Chatbot Implementation Obstacles". In the Proceedings of the ModSim World Conference, Norfolk, Virginia. </p>
+                      </div>
 
-                            {{buildImgs @index}}
+                      <div class="timeline-body">
+                          <p> Breck, S., Carr, K., Davis, D. M., Nordhagen, J. N., and Nye, B. D. (2018). "Virtual Mentors in a Real STEM Fair: Experiences, Challenges, and Opportunities". In Third International Workshop on Intelligent Mentoring Systems (IMS 2018) Proceedings. </p>
+                      </div>
 
-                            <p>{{description}}</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{/each}}
+                      <div class="col-lg-12 text-center">
+                        <h3 class="section-subheading text-muted"> Technical Projects </h3>
+                      </div>
 
+                      <div class="experience-heading">
+                          <h5 class="subheading"><a href="https://boxi.co/" target="_blank">Boxi</a></h5>
+                          <h4> April 2020 - Present</h4>
+                          <br/>
+                      </div>
+                      <div class="timeline-body">
+                          <p> Developed new landing page to increase online/organic sales for truck advertising company, boxi.co. PO of online dashboard so clients can track their routes, impressions, and miles driven. </p>
+                      </div>
 
-</script>
+                      <div class="experience-heading">
+                          <h5 class="subheading"><a href="https://giveduet.org/" target="_blank">Duet</a></h5>
+                          <h4>January 2019 - May 2019</h4>
+                          <br/>
+                      </div>
+                      <div class="timeline-body">
+                          <p> Developed donate, checkout, and inventory process for non-profit organization, giveduet.org as part of senior capstone project. Duet is a website to help people provide direct support to resettled refugees. </p>
+                      </div>
 
+                      <div class="experience-heading">
+                          <h5 class="subheading"><a href="https://www.youtube.com/watch?v=_bQz-9nY8TU" target="_blank">Tommy Bot</a></h5>
+                          <h4>September 2016 - January 2018</h4>
+                          <br/>
+                      </div>
+                      <div class="timeline-body">
+                          <p> Messenger chatbot for all things related to USC (building location/hours, menus, events, etc.). 50,000 total interactions since launch in Jan 2017, $10,000 in funding from USC Iovine and Young pitch competition. Part of LavaLab's F16 cohort, USC's highly selective student run incubator. </p>
+                      </div>
 
-<script src="js/bootstrap.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="js/classie.js"></script>
+                      <div class="experience-heading">
+                          <h5 class="subheading"><a href="https://github.com/codeon19/eYak" target="_blank">eYak</a></h5>
+                          <h4>April 2017</h4>
+                          <br/>
+                      </div>
+                      <div class="timeline-body">
+                          <p> This project was first incepted during LAHacks2017 and completed for the Scope USC Demo night. eYak is a way for students to ask questions during a classroom session anonymously. Think of it as a combination of the functionality of Piazza and the interface of Yik Yak. </p>
+                      </div>
 
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/contact_me.js"></script>
+                      <div class="experience-heading">
+                          <h5 class="subheading"><a href="https://github.com/Vadman97/SCal" target="_blank">Scal.tech</a></h5>
+                          <h4>November - December 2016</h4>
+                          <br/>
+                      </div>
+                      <div class="timeline-body">
+                        <p>
+                          This interactive calendar application was built for my CS 201 Principles of Software Devleopment class. The web application contains many of the same features as Google calendar including creating events and sharing them with others. We decided to add increased functionality by allowing for a user to import their USC-specific classes, recieve real-time study notifications, import events from an ICS reader, and recieve study recommendations.
+                        </p>
+                      </div>
 
-<script src="js/agency.js"></script>
-<script src="js/cbpAnimatedHeader.js"></script>
+                      <div class="experience-heading">
+                          <h5 class="subheading"><a href="https://devpost.com/software/split-lj6mwo" target="_blank">Split</a></h5>
+                          <h4>November 2016</h4>
+                          <br/>
+                      </div>
+                      <div class="timeline-body">
+                        <p> This project was a Cal Hacks 3.0 project along with 4 other USC students and my first time using Swift and XCode. Swift is an easy to use receipt parsing iOS app using Microsoft Computer Vision API to parse text/relative position in image. In addition to the Computer Visiion API, we used imgur to post and host images using an HTTP POST request to their API. </p>
+                      </div>
 
-<script src="js/clip.js"></script>
+                      <div class="experience-heading">
+                          <h5 class="subheading"><a href="https://github.com/codeon19/TransitPriority" target="_blank">Transit Priority</a></h5>
+                          <h4>July 2016</h4>
+                          <br/>
+                      </div>
+                      <div class="timeline-body">
+                            <p>Developed a vehicle interface through an android application to demonstrate the possible applications of DSRC technology with Transit Vehicles. Application gives priority to a Transit Vehicle at an intersection via V2R communication through modification of the standard protocol BSM broadcasted by the DSRC OBU and modification of traffic control logic to optimize traffic flow. </p>
+                      </div>
 
+                      <div class="col-lg-12 text-center">
+                          <h3 class="section-subheading text-muted"> Other Projects </h3>
+                      </div>
+
+                      <div class="experience-heading">
+                          <h5 class="subheading"><a href="http://www.haroldrobinsonfoundation.org/" target="_blank">Harold Robinson Foundation</a></h5>
+                          <h4>September 2016 - December 2016</h4>
+                          <br/>
+                      </div>
+                      <div class="timeline-body">
+                          <p> As Team Leader, I managed this team to help the Harold Robinson Foundation (HRF) develop impact metrics to measure their program impact. HRF came to LACI in order to start measuring different data points of their youth development programming. We managed to identify these different data points and provide a preliminary measurement for HRF. In addition, we built a impact metrics database in order to provide HRF with the tools to keep track of the data they collect as well as illustrate, condense, and evaluate the measured data.  </p>
+                      </div>
+
+                      <div class="experience-heading">
+                          <h5 class="subheading"><a href="http://beatthestreets-la.org/" target="_blank">Beat the Streets Los Angeles</a></h5>
+                          <h4>January 2016 - May 2016</h4>
+                          <br/>
+                      </div>
+                      <div class="timeline-body">
+                            <p>BTSLA approached LACI with the idea of making their programs more holistic and impactful through the addition of a program that would be supplementary to their current wrestling instruction. In order to develop the necessary recommendation for what to teach, how to teach, and how to implement the supplementary program, we conducted intensive research from the following methodologies: online research, numerous phone and in-person interviews, USC professors and academic papers.</p>
+                      </div>
+
+                      <div class="experience-heading">
+                          <h5 class="subheading"><a href="http://www.monkeybusinesscafe.org/" target="_blank">Monkey Business Cafe</a></h5>
+                          <h4>September 2015 - December 2015</h4>
+                          <br/>
+                      </div>
+                      <div class="timeline-body">
+                            <p>In order to help Monkey Business Cafe to achieve its goal as a social enterprise serving at-risk youth through its workforce development program, we sought to increase revenue by addressing a couple of key needs. Monkey Business Cafe came to LACI hoping to market for recently opened evening hours and strengthen the newly streamlined catering business. Our project tackles these needs through intensive market research and strategic planning to address Monkey Business Cafe's most important needs.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="Contact">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">Contact</h2>
+                  <br/>
+              </div>
+          </div>
+          <div class="row text-center">
+              <a href="mailto:samuelbreck19@gmail.com" target="_blank">
+                <span class="fa-stack fa-2x">
+                  <i class="fa fa-square fa-stack-2x text-primary"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              <a href="https://github.com/codeon19" target="_blank">
+                <span class="fa-stack fa-2x">
+                    <i class="fa fa-square fa-stack-2x text-primary"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              <a href="https://www.linkedin.com/in/samuel-breck-164703109" target="_blank">
+                <span class="fa-stack fa-2x">
+                    <i class="fa fa-square fa-stack-2x text-primary"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              <a href="https://scholar.google.com/citations?user=9bWFKCEAAAAJ&hl=en&citsig=ALAJMKFOM4MIIWHG9BPj8SUDJFW_" target="_blank">
+                <span class="fa-stack fa-2x">
+                    <i class="fa fa-square fa-stack-2x text-primary"></i>
+                    <i class="fa fa-university fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+          </div>
+      </div>
+  </section>
+
+  <footer id="contact" >
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 text-center">
+                  <p class="copyright">Handmade with <i class="fa fa-heart"></i></p>
+                  <p class="copyright">Samuel Breck | 2025</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <!-- jQuery for page scrolling feature - requires jQuery Easing plugin -->
+  <script>
+  $(function() {
+      $('a.page-scroll').bind('click', function(event) {
+          var $anchor = $(this);
+          $('html, body').stop().animate({
+              scrollTop: $($anchor.attr('href')).offset().top
+          }, 1500, 'easeInOutExpo');
+          event.preventDefault();
+      });
+  });
+
+  // Highlight the top nav as scrolling occurs
+  $('body').scrollspy({
+      target: '.navbar-fixed-top'
+  })
+
+  // Closes the Responsive Menu on Menu Item Click
+  $('.navbar-collapse ul li a').click(function() {
+      $('.navbar-toggle:visible').click();
+  });
+
+  // Navbar scroll effect - add black background when scrolling
+  $(window).scroll(function() {
+      if ($(window).scrollTop() > 50) {
+          $('.navbar-default').addClass('navbar-shrink');
+      } else {
+          $('.navbar-default').removeClass('navbar-shrink');
+      }
+  });
+
+  // Animated typing effect
+  $(document).ready(function() {
+      var phrases = ['always asks, Why?', 'moves fast', 'is data driven', 'iterates and improves'];
+      var currentPhrase = 0;
+      var currentText = '';
+      var isDeleting = false;
+      var typeSpeed = 125;
+      var deleteSpeed = 37.5;
+      var pauseTime = 625;
+      var typingInterval;
+
+      function startTyping() {
+          typingInterval = setInterval(function() {
+              if (!isDeleting) {
+                  if (currentText.length < phrases[currentPhrase].length) {
+                      currentText = phrases[currentPhrase].substring(0, currentText.length + 1);
+                  } else {
+                      setTimeout(function() { isDeleting = true; }, pauseTime);
+                      clearInterval(typingInterval);
+                      setTimeout(function() { startTyping(); }, pauseTime + 10);
+                  }
+              } else {
+                  if (currentText.length > 0) {
+                      currentText = currentText.substring(0, currentText.length - 1);
+                  } else {
+                      isDeleting = false;
+                      currentPhrase = (currentPhrase + 1) % phrases.length;
+                  }
+              }
+              $('.cd-words-wrapper b.is-visible').text(currentText);
+          }, isDeleting ? deleteSpeed : typeSpeed);
+      }
+
+      // Start the typing animation
+      startTyping();
+  });
+  </script>
 </body>
-
-<!--Your new content will be displayed in here-->
-<body id="page-top" class="index" data-spy="scroll" data-target="nav">
-  <div class="content-placeholder"></div>
-</body>
-
-
 </html>
